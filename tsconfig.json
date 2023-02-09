@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": ["ES2021"],
+
+    "module": "commonjs",
+    "baseUrl": "./",
+    "outDir": "./build",
+
+    "alwaysStrict": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+
+    "declaration": false,
+    "sourceMap": false,
+    "removeComments": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "incremental": true,
+
+    "types": ["node", "jest"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}

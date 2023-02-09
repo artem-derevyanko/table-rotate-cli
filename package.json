@@ -1,0 +1,44 @@
+{
+  "name": "table-rotate-cli",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">= 18.14.0"
+  },
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check:format": "prettier --check \"src/**/*.ts\"",
+    "check:lint": "eslint --cache \"src/**/*.ts\"",
+    "fix:format": "prettier --write \"src/**/*.ts\"",
+    "fix:lint": "yarn check:lint --fix",
+    "fix": "yarn fix:lint && yarn fix:format",
+    "start:dev": "tsc-watch --onSuccess \"node build/cli ./samples/example.csv output.csv\"",
+    "start": "node build/cli.js",
+    "prebuild": "rimraf build",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "jest": "^29.4.2",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "ts-jest": "^29.0.5",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.5"
+  }
+}
